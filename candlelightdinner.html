@@ -435,31 +435,12 @@ margin-left: 50px;
   </style>
     </head>
     
-    <footer>
-      <div class="container">
-        <div class="row">
-         <div class="col-lg-2 col-sm-4">
-      <div class="socialicons">
-        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-    </div>
-  
-  <div class="col-lg-8 col-sm-4">
-        <p>
-         <b> <a>Copyright @ 2023 technology. All rights reserved - Designed and Developed by proclamation Hub </a></b>
-        </p>
-      </div> 
-       <div class="col-lg-2 col-sm-4">
-      <video autoplay muted loop width="200px" height="100%">
-        <source id="vid" src="img/footer.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-     </div>
-  </div>
-  </div>
-    </footer>
+    <div id="footer"></div>
+  <script>
+      fetch('footer.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
 </body>
 
 
